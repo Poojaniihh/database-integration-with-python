@@ -11,7 +11,6 @@ def create_invoice(user_id: int, amount: float, description):
                 RETURNING id, user_id, amount, description, created_at
                 
                 """, (user_id, amount, description)
-
             )
             return cursor.fetchone()
 
